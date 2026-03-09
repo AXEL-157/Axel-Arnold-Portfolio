@@ -21,7 +21,7 @@ export default function Projects() {
     {
       name: "To‑Do List",
       img: todo,
-      desc: "Mon primies site que j'ai fais a Epitech en groupe en react ",
+      desc: "Mon primies site que j'ai fais a Epitech en groupe et en react ",
       download: "/assets/mes_projets/to-do-list.zip",
     },
   ];
