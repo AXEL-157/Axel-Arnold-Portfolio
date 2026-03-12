@@ -7,7 +7,7 @@ export default function Navbar() {
 
   const navItems = [
     { path: "/", label: "Home", icon: <FaHome /> },
-    { path: "/profil", label: "contacter", icon: <FaUser /> },
+    { path: "/contacter", label: "contacter", icon: <FaUser /> },
     { path: "/skills", label: "Skills", icon: <FaTools /> },
     { path: "/projects", label: "Projects", icon: <FaFolderOpen /> },
   ];
