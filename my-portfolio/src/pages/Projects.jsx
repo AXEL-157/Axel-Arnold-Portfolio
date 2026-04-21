@@ -5,30 +5,36 @@ import "slick-carousel/slick/slick-theme.css";
 import hotel from "../assets/mes_projets/hotel.png";
 import login from "../assets/mes_projets/login.png";
 import todo from "../assets/mes_projets/todo.png";
-import eliza from "../assets/mes_projets/eliza.png"
+import eliza from "../assets/mes_projets/eliza.png";
+
+import todoZip from "../assets/mes_projets/to-do-list.zip";
+import elizaZip from "../assets/mes_projets/eliza.zip";
+
 export default function Projects() {
   const projects = [
     {
       name: "Site Hôtel",
       img: hotel,
-      desc: "Mon preimier site que j'ai fais !",
+      desc: "Mon premier site que j'ai fait !",
+      link: "https://axel-157.github.io/hotel/", // 🔗 AJOUT
     },
     {
       name: "Page Login",
       img: login,
-      desc: "Un projet que je voilais fais pour m'entrener a fais du css ",
+      desc: "Un projet que j'ai fait pour m'entraîner au CSS.",
+      link: "https://axel-157.github.io/login/", // 🔗 AJOUT
     },
     {
       name: "To‑Do List",
       img: todo,
-      desc: "Mon primies site que j'ai fais a Epitech en groupe et en react",
-      download: "/assets/mes_projets/to-do-list.zip",
+      desc: "Mon premier site fait à Epitech en groupe et en React.",
+      download: todoZip,
     },
-      {
-      name: "eliza",
-      img: todo,
-      desc: "le but du projet est de créer un chatbot pour répondre à un besoin et aider une entreprise on la fait en React Python",
-      download: "../assets/mes_projets/eliza.zip",
+    {
+      name: "Eliza",
+      img: eliza,
+      desc: "Chatbot réalisé en React + Python pour répondre à un besoin d'entreprise.",
+      download: elizaZip,
     },
   ];
 
@@ -54,6 +60,18 @@ export default function Projects() {
               <h2 className="project-title">{p.name}</h2>
               <p className="project-desc">{p.desc}</p>
 
+              {p.link && (
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="site-btn"
+                >
+                  Voir le site
+                </a>
+              )}
+
+          
               {p.download && (
                 <a href={p.download} download className="download-btn">
                   Télécharger
