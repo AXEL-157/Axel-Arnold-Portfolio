@@ -7,34 +7,31 @@ import login from "../assets/mes_projets/login.png";
 import todo from "../assets/mes_projets/todo.png";
 import eliza from "../assets/mes_projets/eliza.png";
 
-import todoZip from "../assets/mes_projets/to-do-list.zip";
-import elizaZip from "../assets/mes_projets/eliza.zip";
-
 export default function Projects() {
   const projects = [
     {
       name: "Site Hôtel",
       img: hotel,
       desc: "Mon premier site que j'ai fait !",
-      link: "https://axel-157.github.io/hotel/", // 🔗 AJOUT
+      link: "/assets/mes_projets/hotel/", // 🔗 dossier local
     },
     {
       name: "Page Login",
       img: login,
-      desc: "Un projet que j'ai fait pour m'entraîner au CSS.",
-      link: "https://axel-157.github.io/login/", // 🔗 AJOUT
+      desc: "Un projet pour m'entraîner au CSS.",
+      link: "/assets/mes_projets/login/", // 🔗 dossier local
     },
     {
       name: "To‑Do List",
       img: todo,
       desc: "Mon premier site fait à Epitech en groupe et en React.",
-      download: todoZip,
+      download: "/assets/mes_projets/to-do-list.zip",
     },
     {
       name: "Eliza",
       img: eliza,
-      desc: "Chatbot réalisé en React + Python pour répondre à un besoin d'entreprise.",
-      download: elizaZip,
+      desc: "Chatbot réalisé en React + Python pour une entreprise.",
+      download: "/assets/mes_projets/eliza.zip",
     },
   ];
 
@@ -60,18 +57,17 @@ export default function Projects() {
               <h2 className="project-title">{p.name}</h2>
               <p className="project-desc">{p.desc}</p>
 
+              {/* Bouton Voir le site */}
               {p.link && (
                 <a
                   href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="site-btn"
                 >
                   Voir le site
                 </a>
               )}
 
-          
+              {/* Bouton Télécharger */}
               {p.download && (
                 <a href={p.download} download className="download-btn">
                   Télécharger
