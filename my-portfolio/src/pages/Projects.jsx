@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import hotel from "../assets/mes_projets/hotel.png";
 import login from "../assets/mes_projets/login.png";
 import todo from "../assets/mes_projets/todo.png";
-
+import eliza from "../assets/mes_projets/eliza.png"
 export default function Projects() {
   const projects = [
     {
@@ -21,8 +21,14 @@ export default function Projects() {
     {
       name: "To‑Do List",
       img: todo,
-      desc: "Mon primies site que j'ai fais a Epitech en groupe et en react ",
+      desc: "Mon primies site que j'ai fais a Epitech en groupe et en react",
       download: "/assets/mes_projets/to-do-list.zip",
+    },
+      {
+      name: "eliza",
+      img: todo,
+      desc: "le but du projet est de créer un chatbot pour répondre à un besoin et aider une entreprise on la fait en React Python",
+      download: "../assets/mes_projets/eliza.zip",
     },
   ];
 
